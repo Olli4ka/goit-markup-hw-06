@@ -407,6 +407,7 @@
 				</div>
 			</div>
 		</footer>
+		<!-- --------------------------МОДАЛКА-------------------------- -->
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button type="button" data-modal-close>
@@ -414,6 +415,27 @@
 						<use href="./images/symbol-defs.svg#icon-close"></use>
 					</svg>
 				</button>
+				<p class="modal-title">Оставьте свои данные, мы вам перезоним</p>
+				<form class="modal-form">
+					<label>
+						<span class="input-title">Имя</span>
+						<input type="text" class="form-input" name="user-name" required />
+					</label>
+					<label>
+						<span class="input-title">Телефон</span>
+						<input type="tel" class="form-input" name="user-tel" minlength="10" required />
+					</label>
+					<label>
+						<span class="input-title">Почта</span>
+						<input type="email" class="form-input" name="user-email" required />
+					</label>
+					<label>
+						<span class="input-title">Комментарий</span>
+						<textarea name="comment" class="modal-text" placeholder="Введите текст"></textarea>
+					</label>
+
+					<button type="submit" class="modal-button">Отправить</button>
+				</form>
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
