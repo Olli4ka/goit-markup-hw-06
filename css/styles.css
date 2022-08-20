@@ -95,7 +95,7 @@ button {
 	color: var(--color-black);
 }
 
-.site-nav a {
+.site-nav-item {
 	position: relative;
 	font-weight: 500;
 	line-height: 1.14;
@@ -103,9 +103,9 @@ button {
 	color: var(--color-titles);
 	transition: color 250ms var(--timing-function);
 }
-.site-nav a:hover,
+.site-nav-item:hover,
 .auth-nav a:hover,
-.site-nav a:focus,
+.site-nav-item:focus,
 .auth-nav a:focus {
 	cursor: pointer;
 	color: var(--accent-color);
@@ -119,9 +119,9 @@ button {
 	position: relative;
 }
 .current::after {
-	position: absolute;
 	content: "";
 	position: absolute;
+
 	bottom: 0;
 	left: 0;
 	display: block;
@@ -420,7 +420,9 @@ button {
 .position {
 	display: flex;
 	align-items: baseline;
-	gap: 70px;
+}
+.footer-contacts {
+	margin-right: 70px;
 }
 .address {
 	font-weight: 400;
@@ -449,7 +451,9 @@ address a:hover,
 address a:focus {
 	color: var(--accent-color);
 }
-
+.adition {
+	margin-right: 70px;
+}
 .add {
 	font-weight: 700;
 	font-size: 14px;
@@ -481,6 +485,9 @@ address a:focus {
 .sotial-links:focus {
 	background-color: var(--accent-color);
 }
+.footer-sub {
+	margin-left: auto;
+}
 .subscribe {
 	display: block;
 	font-weight: 700;
@@ -504,6 +511,15 @@ address a:focus {
 	border-radius: 4px;
 	padding-left: 16px;
 	background-color: transparent;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.25;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.03em;
+
+	color: rgba(255, 255, 255, 0.6);
 }
 .subscribe-input::placeholder {
 	font-weight: 400;
@@ -670,7 +686,7 @@ address a:focus {
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0);
 }
-.icon-close {
+.close {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -684,11 +700,12 @@ address a:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+}
+.icon-close {
 	transition: fill 250ms var(--timing-function);
 }
-.icon-close:hover,
-.icon-close:focus {
+.close:hover,
+.close:focus {
 	fill: var(--accent-color);
 }
 .is-hidden {
@@ -713,6 +730,12 @@ address a:focus {
 .input-field {
 	margin-bottom: 10px;
 }
+.input-field-coment {
+	margin-bottom: 20px;
+}
+.input-field-che {
+	margin-bottom: 30px;
+}
 .input-wrap {
 	position: relative;
 }
@@ -725,7 +748,8 @@ address a:focus {
 
 	transform: border 250ms var(--timing-function);
 }
-.form-input:focus {
+.form-input:focus,
+.form-input:hover {
 	outline-color: var(--accent-color);
 }
 .input-icon {
@@ -733,11 +757,8 @@ address a:focus {
 	top: 50%;
 	left: 12px;
 	transform: translateY(-50%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
-	transform: fill 250ms var(--timing-function);
+	transition: fill 250ms var(--timing-function);
 }
 .form-input:focus + .input-icon {
 	fill: var(--accent-color);
