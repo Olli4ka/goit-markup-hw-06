@@ -95,25 +95,26 @@ button {
 	color: var(--color-black);
 }
 
-.site-nav-item {
-	position: relative;
+.site-nav a {
 	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--color-titles);
 	transition: color 250ms var(--timing-function);
+	padding-bottom: 32px;
 }
-.site-nav-item:hover,
+
+.site-nav a:hover,
 .auth-nav a:hover,
-.site-nav-item:focus,
+.site-nav a:focus,
 .auth-nav a:focus {
 	cursor: pointer;
 	color: var(--accent-color);
 }
 
 .current {
+	position: relative;
 	color: var(--accent-color);
-	padding-bottom: 32px;
 }
 .site-nav {
 	position: relative;
@@ -451,9 +452,7 @@ address a:hover,
 address a:focus {
 	color: var(--accent-color);
 }
-.adition {
-	margin-right: 70px;
-}
+
 .add {
 	font-weight: 700;
 	font-size: 14px;
@@ -746,7 +745,7 @@ address a:focus {
 	border-radius: 4px;
 	padding-left: 42px;
 
-	transform: border 250ms var(--timing-function);
+	transition: border 250ms var(--timing-function);
 }
 .form-input:focus,
 .form-input:hover {
